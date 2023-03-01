@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container3 {
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        .container2 {
+            text-align: center;
+            margin-top: 50px;
+            
+        }
+
+        .container {
+            background-color: rgb(29, 24, 24);
+            width: 400px;
+            height: 400px;
+            margin: auto;
+            border-radius: 20px;
+            box-shadow: 0px 4px 6px rgb(234, 234, 241), 0px 2px 15px rgb(220, 220, 235);
+
+        }
+
+        input {
+            margin-top: 50px;
+            width: 200px;
+            height: 40px;
+            border-radius: 7px;
+            color: aqua;
+        }
+
+        button {
+            width: 100px;
+            height: 40px;
+            border-radius: 7px;
+            font-weight:bolder;
+            font-size: larger;
+            color:orangered;
+        }
+        .raj2{text-align: center;
+        padding-top: 20px;
+    color: rgb(245, 236, 236);}
+
+        .raj{
+            color:white;
+            text-align: center;
+        }
+        button:hover{
+            background-color: violet;
+            color: antiquewhite;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="raj2"><h1>EVEN or ODD </h1></div>
+        <div class="container2"><input id="num1" type="number"></div>
+        
+        <div class="container3"><button onclick="Even()">CHECK</button></div>
+        <div>
+        <input id="total" type="text" >
+        </div>
+    </div>
+
+    <script>
+        function Even() {
+            var num1 = document.getElementById('num1').value;
+            if (num1 % 2 == 0) {
+                num2 = "EVEN NUMBER";
+            }
+             else{
+                num2="ODD NUMBER"
+             }
+          
+            document.getElementById('total').innerHTML = num2;
+        }
+
+
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1{
+            text-align: center;
+        }
+        .container3 {
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        .container2 {
+            text-align: center;
+            margin-top: 50px;
+            
+        }
+
+        .container {
+            background-color: rgb(20, 19, 19);
+            width: 400px;
+            height: 400px;
+            margin: auto;
+            border-radius: 20px;
+            box-shadow: 0px 4px 6px rgb(234, 234, 241), 0px 2px 15px rgb(220, 220, 235);
+
+        }
+
+        input {
+            margin-top: 50px;
+            width: 200px;
+            height: 50px;
+            border-radius: 7px;
+        }
+
+        button {
+            width: 100px;
+            height: 40px;
+            border-radius: 7px;
+            font-weight:bolder;
+            font-size: larger;
+            color:orangered;
+            box-shadow: 2px 4px 5px -2px gray, 2px 4px 4px -2px gray;
+        }
+        .raj2{text-align: center;
+        padding-top: 20px;
+    color: rgb(245, 238, 238);}
+
+        .raj{
+            color:white;
+            text-align: center;
+        }
+        button:hover{
+            background-color: violet;
+            color: antiquewhite;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Prime Number Or Not</h1>
+    <div class="container">
+        <div class="raj2"><h1>Prime Number Or Not </h1></div>
+        <div class="container2"><input id="number" type="number"></div>
+        
+        <div class="container3"><button onclick="Primenumber()">CHECK</button></div>
+        <div>
+            <h1 class="raj" id="total"></h1>
+        </div>
+    </div>
+
+    <script>
+        function Primenumber() {
+            // program to check if a number is prime or not
+            var number = document.getElementById('number').value;
+// take input from the user
+
+let isPrime = true;
+
+// check if number is equal to 1
+if (number === 1) {
+    console.log("1 is neither prime nor composite number.");
+}
+
+// check if number is greater than 1
+else if (number > 1) {
+
+    // looping through 2 to number-1
+    for (let i = 2; i < number; i++) {
+        if (number % i == 0) {
+            isPrime = false;
+            break;
+        }
+    }
+
+    if (isPrime) {
+        num2= "It is a prime number";
+    } else {
+        num2="It is not a prime number";
+    }
+}
+
+// check if number is less than 1
+else {
+   num2="It is not a prime number";
+}
+          
+            document.getElementById('total').innerHTML = num2;
+        }
+
+
+
+
+    </script>
+</body>
+
+</html>

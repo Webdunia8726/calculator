@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link rel="stylesheet" href="index.css">
+    <style>
+        p{
+            color: black;
+            font-size: xx-large;
+        }
+    </style>
+</head>
+<body>
+<p>Find Factor</p>
+    <h1 id="fac1"></h1>
+    <input type="number" id="num1">
+    <button onclick="factor()"> CLICK</button>
+    <h2 id="result1"></h2>
+    <script>
+function factor(){
+    var num2=parseInt(document.getElementById("num1").value);
+    for( let i=1; i<=num2;i++){
+        if(num2%i==0){
+
+         num3=i;
+          
+           document.write("\n"+num3);
+        }
+        
+    }
+    
+}
+    </script>
+</body>
+</html>
